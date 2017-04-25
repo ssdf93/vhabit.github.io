@@ -2,7 +2,13 @@
 var language = navigator.browserLanguage?navigator.browserLanguage:navigator.language;
 // alert(language);
 if (language.indexOf('en') > -1) document.location.href = 'index_en.html';
-else if (language.indexOf('zh') > -1) document.location.href = 'index_zh.html';
+else if (language.indexOf('zh') > -1){
+    if (language.indexOf('zh-CN') > -1){
+        document.location.href = 'index_zh.html';
+    }else{
+        document.location.href = 'index_hk.html';
+    }
+}
 else
 document.location.href = 'index_en.html';
 </script>
